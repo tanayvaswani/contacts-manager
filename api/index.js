@@ -9,6 +9,7 @@ const port = process.env.PORT || 7000;
 connectDB();
 app.use(express.json()); // inbuilt middleware & provides a body parser
 app.use("/api/contacts", require("./routes/contactRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 app.use(errorHandler);
 
 app.listen(port, () => {

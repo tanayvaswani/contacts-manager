@@ -74,10 +74,10 @@ const loginUser = asyncHandler(async (req, res) => {
 });
 
 // @desc Profile of a user
-// @route POST /api/users/profile
+// @route GET /api/users/profile
 // @access private
 const userProfile = asyncHandler(async (req, res) => {
-  res.json({ message: "User Profile" });
+  res.json(req.user);
 });
 
 module.exports = {

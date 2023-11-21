@@ -1,6 +1,6 @@
-const { constants } = require("../constants");
+import { constants } from "../constants";
 
-const errorHandler = (err, req, res, next) => {
+export const errorHandler = (err, req, res, next) => {
   const statusCode = req.statusCode ? res.statusCode : 500;
 
   switch (statusCode) {

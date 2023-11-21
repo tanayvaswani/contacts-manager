@@ -1,12 +1,12 @@
-const express = require("express");
-const {
+import express from "express";
+import {
   getContacts,
   createContact,
   getContact,
   deleteContact,
   updateContact,
-} = require("../controllers/contactController");
-const validateToken = require("../middleware/validateTokenHandler");
+} from "../controllers/contactController";
+import validateToken from "../middleware/validateTokenHandler";
 const router = express.Router();
 
 router.use(validateToken); // middleware for validating tokens for all the routes

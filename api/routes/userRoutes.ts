@@ -1,10 +1,6 @@
-const express = require("express");
-const {
-  registerUser,
-  loginUser,
-  userProfile,
-} = require("../controllers/userController");
-const validateToken = require("../middleware/validateTokenHandler");
+import express from "express";
+import { registerUser, loginUser, userProfile } from "../controllers/userController";
+import validateToken from "../middleware/validateTokenHandler";
 const router = express.Router();
 
 // Registration of an user

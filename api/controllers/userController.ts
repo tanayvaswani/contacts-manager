@@ -1,7 +1,7 @@
-const asyncHandler = require("express-async-handler");
-const Users = require("../models/userModel");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+import asyncHandler from "express-async-handler";
+import Users from "../models/userModel";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 // @desc Register a user
 // @route POST /api/users/register

@@ -8,10 +8,10 @@ const validateToken = require("../middleware/validateTokenHandler");
 const router = express.Router();
 
 // Registration of an user
-router.post("/register", registerUser);
+router.post("/signup", registerUser);
 
 // Login the registered user
-router.post("/login", loginUser);
+router.post("/signin", loginUser);
 
 // View the profile of an user
 router.get("/profile", validateToken, userProfile);

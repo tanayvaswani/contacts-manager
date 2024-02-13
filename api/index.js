@@ -12,6 +12,10 @@ app.use("/api/v1/contacts", require("./routes/contactRoutes"));
 app.use("/api/v1/users", require("./routes/userRoutes"));
 app.use(errorHandler);
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ message: "Health check success!" });
+});
+
 app.listen(port, () => {
   console.log(`Server is listening to ${port}`);
 });
